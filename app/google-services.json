@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "438564042406",
+    "firebase_url": "https://meyesite-e4b2f-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "meyesite-e4b2f",
+    "storage_bucket": "meyesite-e4b2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438564042406:android:cb9a4d97b8625a65336667",
+        "android_client_info": {
+          "package_name": "com.example.meyesite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438564042406-vs6ouc7iaovau52fr6i80h1sc3ugmf0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN4nDFVY0CV-UYY_xZAYZrZh9y134vutU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438564042406-vs6ouc7iaovau52fr6i80h1sc3ugmf0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
