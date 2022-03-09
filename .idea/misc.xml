@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/Users/wobbl/AndroidStudioProjects/MEyeSite/app/src/main/res/drawable/google_button.xml" value="0.1405" />
         <entry key="..\:/Users/wobbl/AndroidStudioProjects/MEyeSite/app/src/main/res/drawable/ic_baseline_person_pin_24.xml" value="0.175" />
+        <entry key="..\:/Users/wobbl/AndroidStudioProjects/MEyeSite/app/src/main/res/layout-v31/activity_login_screen.xml" value="0.18795289855072464" />
         <entry key="..\:/Users/wobbl/AndroidStudioProjects/MEyeSite/app/src/main/res/layout/activity_login_screen.xml" value="0.19444444444444445" />
+        <entry key="..\:/Users/wobbl/AndroidStudioProjects/MEyeSite/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>
