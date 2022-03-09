@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import kotlinx.android.synthetic.main.activity_login_screen.*
 
 
 class LoginScreen : AppCompatActivity() {
@@ -28,10 +29,9 @@ class LoginScreen : AppCompatActivity() {
 
         FirebaseApp.initializeApp(this)
 
-
         // Configure Google Sign In inside onCreate mentod
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestIdToken(getString(R.string.default_google_web_client_id))
             .requestEmail()
             .build()
         // getting the value of gso inside the GoogleSigninClient

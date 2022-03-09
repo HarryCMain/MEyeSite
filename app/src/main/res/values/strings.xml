@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">MEyeSite</string>
-    <string name="default_web_client_id">438564042406-iph55i0da9e8e8t9scd9c4cckndchtq2.apps.googleusercontent.com</string>
+    <string name="default_google_web_client_id" translatable="false">438564042406-vs6ouc7iaovau52fr6i80h1sc3ugmf0n.apps.googleusercontent.com</string>
 </resources>
