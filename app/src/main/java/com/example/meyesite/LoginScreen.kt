@@ -10,10 +10,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.auth.UserProfileChangeRequest
 import kotlinx.android.synthetic.main.activity_login_screen.*
 
 
@@ -78,10 +80,28 @@ class LoginScreen : AppCompatActivity() {
             if(task.isSuccessful) {
                 SavedPreference.setEmail(this,account.email.toString())
                 SavedPreference.setUsername(this,account.displayName.toString())
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
+                updateFirebaseUserDisplayName()
             }
+        }
+    }
+
+    private fun updateFirebaseUserDisplayName() {
+
+        FirebaseAuth.getInstance().currentUser?.apply {
+            val profileUpdates : UserProfileChangeRequest = UserProfileChangeRequest.Builder().setDisplayName(
+                firebaseAuth.currentUser?.email
+            ).build()
+            updateProfile(profileUpdates)?.addOnCompleteListener(OnCompleteListener {
+                when(it.isSuccessful) {
+                    true -> apply {
+                        Intent(this@LoginScreen, MainActivity::class.java).apply {
+                            startActivity(this)
+                            finish()
+                        }
+                    }
+                    false -> Toast.makeText(this@LoginScreen, "Login has failed", Toast.LENGTH_SHORT).show()
+                }
+            })
         }
     }
 
